@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/head.ejs')%>
+  <body>
+    <%- include('./partials/nav.ejs')%>
+    <form action="putToDB.js">
+      <div class="form-box">
+        <h2 class="form-heading">Enter a title</h2>
+        <input name="form-title" type="text" id="form-title" placeholder="Enter a title" />
+        <br />
+        <h2 class="form-heading">Enter a blog</h2>
+        <textarea name="form-blog"
+          name="blog"
+          id="form-blog"
+          cols="30"
+          rows="10"
+          placeholder="Write your thoughts here"
+        ></textarea>
+        <!-- <button class="submit-button">Submit</button> -->
+        <input
+          class="cta-buttons"
+          id="cta-buttons"
+          type="button"
+          value="Submit"
+        />
+      </div>
+    </form>
+    <%- include('./partials/footer.ejs')%>
+    <script src="" async defer></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+    <%- include('./partials/head.ejs'); %>
+
+  <body>
+
+   
+
+    <!-- <div class="title">
+      <h1 class=>Welcome to the test Website. </h1>
+      <h6>Here you can find blogs <span> (if any)</span></h6>
+    </div> -->
+    <div class="main">
+    <%- include('./partials/nav.ejs')%>
+    
+    <h1 class="page-heading">Articles</h1>
+    <!-- <h2>Articles</h2> -->
+<div class="row">
+    <%if(blogs.length>0){%> 
+      <%blogs.forEach(blog=>{ %>
+        <a href="#">
+        <div class="blog-area">
+        <h3><%=blog.title%></h3>
+        <p><%=blog.article%></p>
+        <hr/>
+      </div>
+    </a>
+    <%})%>
+    <%}else{%>
+        <h3>No Blogs available</h3>
+    <%}%>
+  </div>
+    <script src="" async defer></script>
+
+      <%- include('./partials/footer.ejs'); %>
+    </div>
+  </body>
+</html>
